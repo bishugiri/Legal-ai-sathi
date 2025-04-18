@@ -1,6 +1,55 @@
 # Legal AI Saathi
 
-A chatbot that helps users understand the Nepal Constitution by answering questions about its contents.
+A chatbot that helps users understand Nepal's constitution using AI.
+
+## Deployment Instructions
+
+### Deploying to Streamlit Community Cloud
+
+1. Create a GitHub account if you don't have one
+2. Create a new repository on GitHub
+3. Push your code to the repository:
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin <your-github-repo-url>
+   git push -u origin main
+   ```
+4. Go to [Streamlit Community Cloud](https://streamlit.io/cloud)
+5. Sign in with your GitHub account
+6. Click "New app"
+7. Select your repository and branch
+8. Set the main file path to `main.py`
+9. Click "Deploy"
+
+### Environment Variables
+
+Make sure to set up your environment variables in Streamlit Cloud:
+1. Go to your app's settings
+2. Click on "Secrets"
+3. Add your environment variables:
+   ```
+   OPENAI_API_KEY=your_api_key
+   ```
+
+## Local Development
+
+1. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Create a `.env` file with your environment variables:
+   ```
+   OPENAI_API_KEY=your_api_key
+   ```
+
+3. Run the app:
+   ```bash
+   streamlit run main.py
+   ```
 
 ## Features
 
@@ -8,35 +57,6 @@ A chatbot that helps users understand the Nepal Constitution by answering questi
 - Vector-based semantic search
 - Conversational interface
 - Source citation for answers
-
-## Setup
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/legal-ai-saathi.git
-cd legal-ai-saathi
-```
-
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-3. Create a `.env` file and add your Hugging Face API key:
-```
-HUGGINGFACE_API_KEY=your_api_key_here
-```
-
-4. Place your PDF document in the `docs` directory
-
-## Usage
-
-Run the Streamlit app:
-```bash
-streamlit run main.py
-```
-
-The app will be available at `http://localhost:8501`
 
 ## Project Structure
 

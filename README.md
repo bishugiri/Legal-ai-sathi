@@ -1,26 +1,15 @@
 # Legal AI Saathi
 
-A Streamlit-based chatbot interface for legal information in Nepal.
+A chatbot that helps users understand the Nepal Constitution by answering questions about its contents.
 
 ## Features
 
-- Interactive chat interface
-- Sample legal prompts related to Nepal's legal system
-- Detailed responses for common legal queries
-- User-friendly interface with purple theme
+- PDF document processing
+- Vector-based semantic search
+- Conversational interface
+- Source citation for answers
 
-## Topics Covered
-
-- Constitutional Rights
-- Company Registration
-- Property Registration
-- Court System
-- Labor Laws
-- Case Filing Process
-- Marriage Registration
-- Business Tax Laws
-
-## Installation
+## Setup
 
 1. Clone the repository:
 ```bash
@@ -33,21 +22,46 @@ cd legal-ai-saathi
 pip install -r requirements.txt
 ```
 
-3. Run the application:
+3. Create a `.env` file and add your Hugging Face API key:
+```
+HUGGINGFACE_API_KEY=your_api_key_here
+```
+
+4. Place your PDF document in the `docs` directory
+
+## Usage
+
+Run the Streamlit app:
 ```bash
 streamlit run main.py
 ```
 
-## Technologies Used
+The app will be available at `http://localhost:8501`
 
-- Python
-- Streamlit
-- HTML/CSS
+## Project Structure
 
-## Developer
+```
+legal-ai-saathi/
+├── docs/                    # PDF documents
+├── utils/                   # Utility functions
+│   ├── chat_utils.py       # Chat-related functions
+│   └── document_loader.py  # PDF processing functions
+├── main.py                 # Main application
+├── requirements.txt        # Dependencies
+└── README.md              # Documentation
+```
 
-Developed by Sankhya AI
+## Dependencies
+
+- streamlit
+- langchain
+- langchain-community
+- transformers
+- sentence-transformers
+- faiss-cpu
+- pypdf
+- python-dotenv
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details. 
+MIT License 

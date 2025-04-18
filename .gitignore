@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 *.so
 .Python
+env/
 build/
 develop-eggs/
 dist/
@@ -15,14 +16,12 @@ lib64/
 parts/
 sdist/
 var/
-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
 
 # Virtual Environment
 venv/
-env/
 ENV/
 
 # IDE
@@ -30,6 +29,15 @@ ENV/
 .vscode/
 *.swp
 *.swo
+
+# Environment variables
+.env
+
+# Vector store
+vector_store/
+
+# Logs
+*.log
 
 # Streamlit
 .streamlit/

@@ -1,1 +1,10 @@
-streamlit==1.32.0 
+streamlit==1.32.0
+langchain==0.3.23
+langchain-community==0.3.21
+transformers==4.51.3
+sentence-transformers==4.1.0
+faiss-cpu==1.7.4
+pypdf==5.4.0
+python-dotenv==0.21.0
+torch==2.6.0
+huggingface-hub==0.30.2 

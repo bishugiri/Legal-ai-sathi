@@ -31,7 +31,7 @@ Make sure to set up your environment variables in Streamlit Cloud:
 2. Click on "Secrets"
 3. Add your environment variables:
    ```
-   OPENAI_API_KEY=your_api_key
+   HUGGINGFACE_API_KEY=your_api_key
    ```
 
 ## Local Development
@@ -43,7 +43,7 @@ Make sure to set up your environment variables in Streamlit Cloud:
 
 2. Create a `.env` file with your environment variables:
    ```
-   OPENAI_API_KEY=your_api_key
+   HUGGINGFACE_API_KEY=your_api_key
    ```
 
 3. Run the app:
@@ -54,18 +54,23 @@ Make sure to set up your environment variables in Streamlit Cloud:
 ## Features
 
 - PDF document processing
-- Vector-based semantic search
+- Vector-based semantic search using Hugging Face models
 - Conversational interface
 - Source citation for answers
+- Sample questions for quick access
+- Responsive UI with dark/light mode support
 
 ## Project Structure
 
 ```
 legal-ai-saathi/
 ├── docs/                    # PDF documents
+│   └── nepal-constitution.pdf
 ├── utils/                   # Utility functions
 │   ├── chat_utils.py       # Chat-related functions
 │   └── document_loader.py  # PDF processing functions
+├── .streamlit/             # Streamlit configuration
+│   └── config.toml        # Theme and server settings
 ├── main.py                 # Main application
 ├── requirements.txt        # Dependencies
 └── README.md              # Documentation
@@ -81,6 +86,28 @@ legal-ai-saathi/
 - faiss-cpu
 - pypdf
 - python-dotenv
+- torch
+- huggingface-hub
+
+## Development Workflow
+
+1. Create a new branch for development:
+   ```bash
+   git checkout -b development
+   ```
+
+2. Make your changes and commit them:
+   ```bash
+   git add .
+   git commit -m "Your commit message"
+   ```
+
+3. Push changes to the development branch:
+   ```bash
+   git push origin development
+   ```
+
+4. Create a pull request to merge into main branch
 
 ## License
 

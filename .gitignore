@@ -33,14 +33,8 @@ ENV/
 # Environment variables
 .env
 
-# Vector store
-vector_store/
-
-# Logs
-*.log
-
 # Streamlit
-.streamlit/
+.streamlit/secrets.toml
 
 # OS
 .DS_Store
